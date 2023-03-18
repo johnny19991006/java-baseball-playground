@@ -16,9 +16,16 @@ public class Input {
         List<Integer> playerNum = new ArrayList<>();
         String input= br.readLine();
 
+        while(input.length()!=3){
+            bw.write("숫자를 3개 입력하시오");
+            bw.newLine();
+            bw.flush();
+            input= br.readLine();
+        }
         for(String number: input.split("")){
             playerNum.add(Integer.parseInt(number));
         }
+
         return playerNum;
     }
 }

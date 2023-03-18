@@ -21,7 +21,6 @@ public class RandomNum {
             }
             i--;
         }
-
         return computerNumber;
     }
 }

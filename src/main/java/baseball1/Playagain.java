@@ -15,7 +15,7 @@ public class Playagain {
             return true;
         }
         br.close();
-        bw.close();
+        bw.close();//버퍼리더,라이터를 닫아줘야 하는데, 다른 클래스에서 닫아주려면 다시 선언해주고 닫아줘야 하는데 어떤방법이 더 나은지 모르겠습니다...
         return false;
     }
 }
