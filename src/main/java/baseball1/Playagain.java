@@ -10,11 +10,11 @@ public class Playagain {
         bw.write("축하합니다! 경기를 다시 시작하겠습니까? 다시 시작 : 1, 종료 : 2");
         bw.newLine();
         bw.flush();
-        Scanner scanner = new Scanner(System.in);
-        char answer = scanner.next().charAt(0);
-        if(answer == '1'){
+        int answer = Integer.parseInt(br.readLine());
+        if(answer == 1){
             return true;
         }
+        br.close();
         bw.close();
         return false;
     }

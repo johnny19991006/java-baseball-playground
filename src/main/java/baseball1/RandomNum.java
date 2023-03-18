@@ -7,20 +7,21 @@ import java.util.Random;
 public class RandomNum {
     public int randomMake(){
         Random random = new Random();
-        return random.nextInt(9) + 1;
+        return random.nextInt(8) + 1;
     }
 
     public List<Integer> create(){
         List<Integer> computerNumber = new ArrayList<>();
-        while (computerNumber.size() < 3){
-            int randomNumber = randomMake();
-            if(computerNumber.contains(randomNumber)){
+
+        for(int i=0;i<3;i++){
+            int randomNumber= randomMake();
+            if (!(computerNumber.contains(randomNumber))) {
+                computerNumber.add(randomNumber);
                 continue;
             }
-            if(!computerNumber.contains(randomNumber)){
-                computerNumber.add(randomNumber);
-            }
+            i--;
         }
+
         return computerNumber;
     }
 }
