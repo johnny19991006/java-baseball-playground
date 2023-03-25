@@ -1,26 +1,19 @@
-## [NEXTSTEP 플레이그라운드의 미션 진행 과정](https://github.com/next-step/nextstep-docs/blob/master/playground/README.md)
+# 리팩토링 pr날리기
+## 조금 늦게 올려 죄송합니다! 많은 리뷰 남겨주시면 감사드리겠습니다.
 
----
-## 학습 효과를 높이기 위해 추천하는 미션 진행 방법
+## 적용한 부분
+##### 1.테스트 케이스에서 @parameterized적용
+##### 2.테스트케이스에서 Random테스트 삭제(작은단위 테스트 적용)
+##### 3.클래스,메서드 좀더 잘게 쪼갬
+##### 4.메시지 enum class사용
+##### 5.가독성 문제로 BufferedReader,Writer삭제
+##### 6.예외처리 추가(사이즈,중복,범위)
+##### 7.readMe file추가
+##### 8.자동정렬(ctrl+art+l적용)
+##### 9.람다식 적용
 
----
-1. 피드백 강의 전까지 미션 진행 
-> 피드백 강의 전까지 혼자 힘으로 미션 진행. 미션을 진행하면서 하나의 작업이 끝날 때 마다 add, commit
-> 예를 들어 다음 숫자 야구 게임의 경우 0, 1, 2단계까지 구현을 완료한 후 push
-
-![mission baseball](https://raw.githubusercontent.com/next-step/nextstep-docs/master/playground/images/mission_baseball.png)
-
----
-2. 피드백 앞 단계까지 미션 구현을 완료한 후 피드백 강의를 학습한다.
-
----
-3. Git 브랜치를 master 또는 main으로 변경한 후 피드백을 반영하기 위한 새로운 브랜치를 생성한 후 처음부터 다시 미션 구현을 도전한다.
-
-```
-git branch -a // 모든 로컬 브랜치 확인
-git checkout master // 기본 브랜치가 master인 경우
-git checkout main // 기본 브랜치가 main인 경우
-
-git checkout -b 브랜치이름
-ex) git checkout -b apply-feedback
-```
+### 적용 못한부분
+##### 1.커밋을 한번에 해버림(다음부턴 조심하겠습니다.)
+##### 2.일급컬렉션 방어적 복사의 이론적 공부는 하였으나 적용이 아직 어려움 (Answer에서 적용 해보려다 실패, get문제로 인해)
+##### 3.input은 로직,뷰를 분리하였지만 output은 컨트롤러에 들어가버림()..흡사jsp를 보는 느낌? 
+만약 저번에도 피드백 주셨지만 못고쳐진 부분이 있다면 꼭 말씀해주세요.
